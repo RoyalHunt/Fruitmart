@@ -3,24 +3,41 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "prepare": "npx msw init public",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-tailwind/react": "2.1.10",
+    "@reduxjs/toolkit": "2.3.0",
+    "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "react-redux": "9.1.2"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/react": "18.2.39",
     "@types/react-dom": "^18",
+    "eslint": "8.57.1",
+    "eslint-config-next": "15.0.3",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "msw": "2.6.6",
     "postcss": "^8",
+    "prettier": "3.3.3",
+    "prettier-plugin-tailwindcss": "0.6.9",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3"
+    "typescript": "^5"
+  },
+  "resolutions": {
+    "@types/react": "18.2.39"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
